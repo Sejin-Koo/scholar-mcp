@@ -1,0 +1,16 @@
+{
+  "name": "scholar-mcp",
+  "version": "1.0.0",
+  "description": "논문 검색 MCP 서버 — PubMed·Europe PMC·bioRxiv/medRxiv·OpenAlex·Semantic Scholar·Unpaywall을 하나의 도구 집합으로 조회하고 합법적 OA PDF 링크를 돌려준다",
+  "type": "module",
+  "scripts": {
+    "test": "node smoke.mjs"
+  },
+  "keywords": ["mcp", "pubmed", "europe-pmc", "biorxiv", "medrxiv", "openalex", "semantic-scholar", "unpaywall"],
+  "license": "ISC",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "fast-xml-parser": "^5.2.5",
+    "zod": "^4.4.3"
+  }
+}
