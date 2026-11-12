@@ -42,3 +42,9 @@ MCP 프로토콜(인메모리 전송)로 모든 도구를 실제 API에 호출�
 - 인용수는 소스마다 집계 기준이 달라 병합 시 최댓값을 쓴다.
 - `verify_links`의 PDF시그니처=false는 서버가 자동 요청을 막는 경우가 많아 링크 불량을 뜻하지 않는다.
 - 유료 논문을 우회해 받는 경로는 제공하지 않는다.
+
+## scholar_citations 방향 별칭·Semantic Scholar 429 대체 (2026-11-12)
+
+- `direction`에 `cited_by`·`citations`·`forward` 등을 넣으면 `citing`으로, `refs`·`backward`·`bibliography` 등은 `references`로 받는다(업무 에이전트가 `cited_by`를 되풀이해 넣어 실패한 기록). 스키마에 보이는 값은 그대로 `citing`·`references` 두 개.
+- `source=semanticscholar`가 요청 한도 초과(429)면 같은 질의를 OpenAlex로 대신 조회하고 `요약.대체`에 그 사실을 적는다. 키가 있어도 전용 한도가 초당 약 1회라 연달아 부르면 걸린다.
+- 네트워크 없이 확인: `npm run test:offline`.
