@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "test": "node smoke.mjs",
-    "test:offline": "node test-citations.mjs"
+    "test:offline": "node test-citations.mjs && node test-deadline.mjs"
   },
   "keywords": ["mcp", "pubmed", "europe-pmc", "biorxiv", "medrxiv", "openalex", "semantic-scholar", "unpaywall"],
   "license": "ISC",
